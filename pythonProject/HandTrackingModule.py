@@ -1,9 +1,4 @@
-"""
-Hand Tracing Module
-By: Murtaza Hassan
-Youtube: http://www.youtube.com/c/MurtazasWorkshopRoboticsandAI
-Website: https://www.computervision.zone/
-"""
+
 
 import cv2
 import mediapipe as mp
@@ -13,7 +8,7 @@ import numpy as np
 
 
 
-# the Definition of a handDetector object
+
 class handDetector():
     def __init__(self, mode=False, maxHands=2, detectionCon=0.5, trackCon=0.5):
         self.mode = mode
@@ -27,11 +22,9 @@ class handDetector():
         self.mpDraw = mp.solutions.drawing_utils
         self.tipIds = [4, 8, 12, 16, 20]
 
-# findHands , function that takes an image and search for hands
     def findHands(self, img, draw=True):
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        self.results = self.hands.process(imgRGB)
-        # print(results.multi_hand_landmarks)
+
 
         if self.results.multi_hand_landmarks:
             for handLms in self.results.multi_hand_landmarks:
@@ -41,7 +34,6 @@ class handDetector():
 
         return img
 
-# findPosition : function that takes an img as argument and returns the position of the hand
     def findPosition(self, img, handNo=0, draw=True):
         xList = []
         yList = []
@@ -86,7 +78,6 @@ class handDetector():
             else:
                 fingers.append(0)
 
-        # totalFingers = fingers.count(1)
 
         return fingers
 
