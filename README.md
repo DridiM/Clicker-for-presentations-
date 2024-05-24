@@ -29,7 +29,7 @@ This code enables you to navigate between slides in a presentation solely throug
 Using this solution is straightforward. Simply run the provided code, position your laptop in front of you, and adjust the angle of the laptop's camera. During your presentation, follow these steps: to navigate to the next slide, raise your right hand to shoulder level; to navigate to the previous slide, raise your left hand to shoulder level.
 ## Demo
 
-
+![github-ezgif com-video-to-gif-converter](https://github.com/DridiM/Clicker-for-presentations-/assets/144357717/4eabd4ab-64e3-4c12-964a-5d8940f54743)
 
 
 ## Dependancies
